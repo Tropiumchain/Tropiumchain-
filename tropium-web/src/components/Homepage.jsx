@@ -18,6 +18,8 @@ import Button from '@material-ui/core/Button';
 
 import infographicsImage from '../tropium_infographics.png'
 
+import { Link } from 'react-router-dom';
+
 
 
 const useStyles = makeStyles({
@@ -33,7 +35,7 @@ const useStyles = makeStyles({
     },
 })
 
-export const Homepage = () => {
+export const Homepage = ({ history }) => {
 
     const classes = useStyles();
 
@@ -43,10 +45,10 @@ export const Homepage = () => {
 
             <Grid item xs={12} sm={8} container spacing={5}>
                 <Grid item xs={12} sm={7}>
-                    <Card >
-                        <CardContent>
+                    <Card style={{ background: '#98ee99' }}>
+                        <CardContent >
 
-                            <Typography gutterBottom color="textSecondary" variant="h4" component="h2">
+                            <Typography gutterBottom color="textSecondary" variant="h4" component="h2" >
                                 About Tropium Chain
                             </Typography>
                             <br />
@@ -79,16 +81,17 @@ export const Homepage = () => {
                         <br />
                         <img className={classes.media} src={infographicsImage} alt="Tropium Image" />
                         <br />
-                        <br />
 
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} sm={12} style={{ margin: '2px' }}>
-                    <Paper elevation={4} variant="outlined" style={{ padding: '30px' }}>
+                <Grid item xs={12} sm={12} style={{ margin: '10px' }}>
+                    <Paper elevation={4} variant="outlined" style={{ background: '#98ee99', padding: '30px' }}>
                         <Grid container alignItems="center" justify="space-evenly" spacing={4}>
                             <Grid item xs={12} sm={2}>
-                                <Button color="primary" variant="outlined">Patients Portal</Button>
+                                <Button color="secondary" variant="outlined" onClick={() => {
+                                    history.push("/patientportal")
+                                }}>Patients Portal</Button>
                             </Grid>
                             <Grid item xs={12} sm={5}>
                                 <Typography variant="h6" color="textSecondary" component="h2">
@@ -96,14 +99,17 @@ export const Homepage = () => {
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={2}>
-                                <Button color="secondary" variant="outlined">Doctors Portal</Button>
+
+                                <Button color="secondary" variant="outlined" onClick={() => {
+                                    history.push("/doctorportal")
+                                }}>Doctors Portal</Button>
                             </Grid>
                         </Grid>
                     </Paper>
                 </Grid>
 
-                <Grid item xs={12} sm={12} style={{ margin: '10px' }}>
-                    <Paper elevation={4} variant="outlined" style={{ padding: '20px' }}>
+                <Grid item xs={12} sm={12} style={{ margin: '10px', padding: '10px' }}>
+                    <Paper elevation={4} variant="outlined" style={{ background: '#98ee99', padding: '20px' }}>
                         <Grid container alignItems="center" justify="space-evenly" spacing={4} direction="column">
                             <Grid item xs={12} sm={12}>
                                 <Typography variant="h4" color="textSecondary" component="h2">
@@ -112,12 +118,12 @@ export const Homepage = () => {
                             </Grid>
                             <Grid item xs={12} sm={12}>
                                 <FormControl>
-                                    <TextField id="outlined-basic" type="number" label="Amount of IOST" variant="outlined" />
+                                    <TextField id="outlined-basic" type="number" color="secondary" label="Amount of IOST" variant="outlined" />
                                     <FormHelperText id="my-helper-text">5 IOST = 1 Tropium</FormHelperText>
                                     <br />
-                                    <TextField id="outlined-basic" label="Referral" variant="outlined" />
+                                    <TextField id="outlined-basic" label="Referral" color="secondary" variant="outlined" />
                                     <br /><br />
-                                    <Button variant="contained" size="medium" color="secondary" style={{ color: 'white' }}>
+                                    <Button variant="contained" size="medium" color="secondary" style={{ color: 'white', marginBottom: '20px' }}>
                                         Purchase Tropium
                                     </Button>
 

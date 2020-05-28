@@ -10,11 +10,13 @@ const useStyles = makeStyles({
         marginLeft: '10px'
     },
     appBarStyle: {
-        background: 'linear-gradient(27deg, rgba(118,194,123,1) 0%, rgba(130,208,133,1) 35%, rgba(70,150,74,1) 100%)'
+        background: 'linear-gradient(27deg, rgba(118,194,123,1) 0%, rgba(130,208,133,1) 35%, rgba(70,150,74,1) 100%)',
+        color: '#000'
     }
 })
 
 
+// https://t.me/Tropiumchain
 
 export const Appbar = () => {
 
@@ -23,10 +25,13 @@ export const Appbar = () => {
     return (
         <AppBar position="static" className={classes.appBarStyle}>
             <Toolbar>
-                <Typography color="black" className={classes.typographyStyle}>
+                <Typography className={classes.typographyStyle}>
                     Tropium Chain
                 </Typography>
-                <Icon>contact_support</Icon>
+                <a href="https://t.me/Tropiumchain" target="_new">
+                    <Icon onClick={() => console.log('clicked icon')}>contact_support</Icon>
+                </a>
+
             </Toolbar>
         </AppBar>
     )

@@ -1,10 +1,15 @@
 import React from 'react';
 
-import { Button, Typography, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { Appbar } from './components/Appbar';
 import { Homepage } from './components/Homepage';
+import { PatientPortal } from './components/PatientPortal';
+import { DoctorPortal } from './components/DoctorPortal';
+
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css';
 
@@ -18,8 +23,6 @@ const useStyles = makeStyles({
 
 })
 
-
-
 function App() {
 
   const classes = useStyles();
@@ -30,7 +33,18 @@ function App() {
         <Appbar />
       </Grid>
       <Grid item xs={12}>
-        <Homepage />
+
+
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={Homepage} />
+            <Route path="/patientportal" component={PatientPortal} />
+            <Route path="/doctorportal" component={DoctorPortal} />
+          </Switch>
+        </BrowserRouter>
+
+
+        {/* <Homepage /> */}
       </Grid>
     </Grid>
   );
