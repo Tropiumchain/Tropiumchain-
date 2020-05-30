@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { Appbar } from './components/Appbar';
 import { Homepage } from './components/Homepage';
+import { About } from './components/About';
 import { PatientPortal } from './components/PatientPortal';
 import { DoctorPortal } from './components/DoctorPortal';
 
@@ -28,25 +29,28 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" className={classes.root}>
-      <Grid item xs={12}>
-        <Appbar />
-      </Grid>
-      <Grid item xs={12}>
+    <BrowserRouter>
+      <Grid container direction="column" className={classes.root}>
+        <Grid item xs={12}>
+          <Appbar />
+        </Grid>
+        <Grid item xs={12}>
 
 
-        <BrowserRouter>
+
           <Switch>
             <Route path="/" exact component={Homepage} />
             <Route path="/patientportal" component={PatientPortal} />
             <Route path="/doctorportal" component={DoctorPortal} />
+            <Route path="/about_us" component={About} />
           </Switch>
-        </BrowserRouter>
 
 
-        {/* <Homepage /> */}
+
+          {/* <Homepage /> */}
+        </Grid>
       </Grid>
-    </Grid>
+    </BrowserRouter>
   );
 }
 

@@ -2,6 +2,9 @@ import React from 'react'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import Icon from '@material-ui/core/Icon';
+import Button from '@material-ui/core/Button';
+
+import { Link } from 'react-router-dom'
 
 
 const useStyles = makeStyles({
@@ -26,13 +29,21 @@ export const Appbar = () => {
         <AppBar position="static" className={classes.appBarStyle}>
             <Toolbar>
                 <Typography className={classes.typographyStyle}>
-                    Tropium Chain
+
+                    <Link to="/" style={{ color: 'white', marginRight: '30px', textDecoration: 'none', cursor: 'pointer', fontSize: '20px' }}>
+                        Tropium Chain
+                </Link>
+
                 </Typography>
-                <a href="https://t.me/Tropiumchain" target="_new">
+                <Link to="/about_us" style={{ color: 'white', marginRight: '30px', textDecoration: 'none', cursor: 'pointer' }}>
+                    About Us
+                </Link>
+
+                <a href="https://t.me/Tropiumchain" target="_new" style={{ marginLeft: '10px', marginRight: '20px' }}>
                     <Icon onClick={() => console.log('clicked icon')}>contact_support</Icon>
                 </a>
 
             </Toolbar>
-        </AppBar>
+        </AppBar >
     )
 }
