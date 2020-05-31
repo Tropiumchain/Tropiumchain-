@@ -18,9 +18,6 @@ const useStyles = makeStyles({
     }
 })
 
-
-// https://t.me/Tropiumchain
-
 export const Appbar = () => {
 
     const classes = useStyles()
@@ -39,9 +36,14 @@ export const Appbar = () => {
                     About Us
                 </Link>
 
-                <a href="https://t.me/Tropiumchain" target="_new" style={{ marginLeft: '10px', marginRight: '20px' }}>
-                    <Icon onClick={() => console.log('clicked icon')}>contact_support</Icon>
+                <a href="https://t.me/Tropiumchain" target="_new" style={{ marginLeft: '10px', marginRight: '20px', textDecoration: 'none', color: 'white' }}>
+                    {/* <Icon onClick={() => console.log('clicked icon')}>contact_support</Icon> */}
+                    Telegram
                 </a>
+
+                <Button variant="outlined" style={{ color: '#338a3e', backgroundColor: 'white', margin: '0 20px' }}>
+                    Login
+                </Button>
 
             </Toolbar>
         </AppBar >

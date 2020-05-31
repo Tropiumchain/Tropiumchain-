@@ -57,6 +57,10 @@ export const About = () => {
                                 airdropped 1 tropium. If you hold 100 you get 100 TRPM 1:1 ICO Airdrop.
                                 <br />
                                 <br />
+                                If your Tropium node gets banned for abuse of medication please contact your doctor and have him restake tokens for you. If he does not want to continue to give you medication and unstakes your Tropium all your ROI rewards will be returned to a pool to use for future funding of the platform.
+                                You will still have any rewards you have already earned and your initial 5,000 Tropium.
+                                <br />
+                                <br />
 
                                 <VerticalTimeline>
                                     <VerticalTimelineElement
