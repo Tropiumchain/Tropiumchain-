@@ -88,21 +88,33 @@ export const Homepage = ({ history }) => {
                 <Grid item xs={12} sm={12} style={{ margin: '10px' }}>
                     <Paper elevation={4} variant="outlined" style={{ background: '#98ee99', padding: '30px' }}>
                         <Grid container alignItems="center" justify="space-evenly" spacing={4}>
-                            <Grid item xs={12} sm={2}>
-                                <Button color="secondary" variant="outlined" onClick={() => {
-                                    history.push("/patientportal")
-                                }}>Patients Portal</Button>
-                            </Grid>
-                            <Grid item xs={12} sm={5}>
+
+                            <Grid item xs={12} sm={12}>
                                 <Typography variant="h6" color="textSecondary" component="h2">
-                                    Click to go to Patient Portal or Doctors Portal depending upon what applies to you.
+                                    Click below to go to Patient Portal, Doctors Portal or MMJ Portal depending upon what applies to you.
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} sm={2}>
+                            <Grid container item xs={12} sm={12} direction="row" justify="center"
+                                alignItems="center" spacing={2}
+                            >
+                                <Grid item xs={12} sm={4}>
+                                    <Button color="secondary" variant="outlined" onClick={() => {
+                                        history.push("/patientportal")
+                                    }}>Patients Portal</Button>
+                                </Grid>
 
-                                <Button color="secondary" variant="outlined" onClick={() => {
-                                    history.push("/doctorportal")
-                                }}>Doctors Portal</Button>
+                                <Grid item xs={12} sm={4}>
+                                    <Button color="secondary" variant="outlined" onClick={() => {
+                                        history.push("/doctorportal")
+                                    }}>Doctors Portal</Button>
+                                </Grid>
+
+                                <Grid item xs={12} sm={4}>
+                                    <Button color="secondary" variant="outlined" onClick={() => {
+                                        history.push("/mmjportal")
+                                    }}>MMJ Portal</Button>
+                                </Grid>
+
                             </Grid>
                         </Grid>
                     </Paper>

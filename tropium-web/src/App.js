@@ -8,11 +8,13 @@ import { Homepage } from './components/Homepage';
 import { About } from './components/About';
 import { PatientPortal } from './components/PatientPortal';
 import { DoctorPortal } from './components/DoctorPortal';
+import { MMJPortal } from './components/MMJPortal';
 
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css';
+
 
 const useStyles = makeStyles({
   root: {
@@ -42,6 +44,7 @@ function App() {
             <Route path="/" exact component={Homepage} />
             <Route path="/patientportal" component={PatientPortal} />
             <Route path="/doctorportal" component={DoctorPortal} />
+            <Route path="/mmjportal" component={MMJPortal} />
             <Route path="/about_us" component={About} />
           </Switch>
 
