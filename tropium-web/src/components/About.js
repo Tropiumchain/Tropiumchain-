@@ -61,7 +61,10 @@ export const About = () => {
                                 You will still have any rewards you have already earned and your initial 5,000 Tropium.
                                 <br />
                                 <br />
-
+                                When funds go into the pool after a user is banned for missing too much weight in their bottle. The doctor will receive 50% of the Roi from staking the tokens.
+                                And doctors can purchase an account with an eos account attached with the software for 250$ and 24 hour support.
+                                <br />
+                                <br />
                                 <VerticalTimeline>
                                     <VerticalTimelineElement
                                         className="vertical-timeline-element--work"
