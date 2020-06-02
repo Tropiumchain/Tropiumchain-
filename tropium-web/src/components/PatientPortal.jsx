@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
@@ -16,14 +16,13 @@ import Button from '@material-ui/core/Button';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+
 import ListItemText from '@material-ui/core/ListItemText';
 
+import FormHelperText from '@material-ui/core/FormHelperText';
+import NativeSelect from '@material-ui/core/NativeSelect';
+
 import { Link } from 'react-router-dom';
-
-
 
 const useStyles = makeStyles({
     root: {
@@ -47,6 +46,21 @@ function generate(element) {
 }
 
 export const PatientPortal = () => {
+
+    const [state, setState] = React.useState({
+        age: '',
+        name: 'hai',
+        eos_account_name: '',
+        patient: ''
+    });
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+    };
 
     const classes = useStyles();
 
@@ -104,29 +118,90 @@ export const PatientPortal = () => {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item xs={12} sm={5}>
-                        <Paper elevation={4} variant="outlined" style={{ background: '#98ee99', padding: '10px' }}>
-                            <Grid container alignItems="center" justify="space-evenly" spacing={4} direction="column">
-                                <Grid item xs={12} sm={12} alignItems="center" justify="center">
-                                    <Typography variant="h4" color="textSecondary" component="h2">
-                                        Staking
-                                </Typography>
-                                </Grid>
-                                <Grid item xs={12} sm={12}>
+
+                    <Grid
+                        item xs={12}
+                        sm={5}
+                        spacing={4}
+                        container
+                        direction="row"
+                        justify="flex-start"
+                    >
+
+                        <Grid item xs={12} sm={12}>
+                            <Card style={{ background: '#98ee99', textAlign: 'center' }}>
+                                <CardContent >
+
+                                    <Typography gutterBottom color="textSecondary" variant="h4" component="h2" >
+                                        Add Details
+                            </Typography>
+                                    <br />
                                     <FormControl>
-                                        <TextField id="outlined-basic" type="number" color="secondary" label="Amount of Tropium" variant="outlined" />
+
                                         <br />
+                                        <TextField id="outlined-basic" label="First Name" color="secondary" variant="outlined" />
+                                        <br />
+                                        <TextField id="outlined-basic" label="Middle Name" color="secondary" variant="outlined" />
+                                        <br />
+                                        <TextField id="outlined-basic" label="Last Name" color="secondary" variant="outlined" />
+
+
+                                        <br />
+
+                                        <TextField id="outlined-basic" label="Bottle Id" color="secondary" variant="outlined" />
+                                        <br />
+
+                                        <TextField id="outlined-basic" label="Doctor Details and ID " color="secondary" variant="outlined" />
+                                        <br />
+
+                                        <TextField id="outlined-basic" label="Pharmacy Details" color="secondary" variant="outlined" />
+                                        <br />
+
+                                        <TextField id="outlined-basic" label="Date of Birth" color="secondary" variant="outlined" />
+                                        <br />
+                                        <TextField id="outlined-basic" label="Email Address" color="secondary" variant="outlined" />
+                                        <br />
+                                        <TextField id="outlined-basic" label="EOS Account Name" color="secondary" variant="outlined" />
                                         <br />
                                         <Button variant="contained" size="medium" color="secondary" style={{ color: 'white', marginBottom: '20px' }}>
-                                            Stake Tropium
+                                            Add Your Details
                                     </Button>
 
                                     </FormControl>
+                                    <br />
 
+                                </CardContent>
+                            </Card>
+
+                        </Grid>
+
+                        <Grid item xs={12} sm={12}>
+                            <Paper elevation={4} variant="outlined" style={{ background: '#98ee99', padding: '10px' }}>
+                                <Grid container alignItems="center" justify="space-evenly" spacing={4} direction="column">
+                                    <Grid item xs={12} sm={12} alignItems="center" justify="center">
+                                        <Typography variant="h4" color="textSecondary" component="h2">
+                                            Staking
+                                </Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <FormControl>
+                                            <TextField id="outlined-basic" type="number" color="secondary" label="Amount of Tropium" variant="outlined" />
+                                            <br />
+                                            <br />
+                                            <Button variant="contained" size="medium" color="secondary" style={{ color: 'white', marginBottom: '20px' }}>
+                                                Stake Tropium
+                                    </Button>
+
+                                        </FormControl>
+
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </Paper>
+                            </Paper>
+                        </Grid>
+
+
                     </Grid>
+
 
                     <Grid item xs={12} sm={12}>
                         <Paper elevation={4} variant="outlined" style={{ background: '#98ee99', padding: '15px' }}>

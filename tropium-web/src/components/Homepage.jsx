@@ -130,10 +130,10 @@ export const Homepage = ({ history }) => {
                             </Grid>
                             <Grid item xs={12} sm={12}>
                                 <FormControl>
-                                    <TextField id="outlined-basic" type="number" color="secondary" label="Amount of IOST" variant="outlined" />
-                                    <FormHelperText id="my-helper-text">5 IOST = 1 Tropium</FormHelperText>
+                                    <TextField id="outlined-basic" type="number" color="secondary" label="Amount of EOS" variant="outlined" />
+                                    <FormHelperText id="my-helper-text">0.25 EOS = 1 Tropium</FormHelperText>
                                     <br />
-                                    <TextField id="outlined-basic" label="Referral" color="secondary" variant="outlined" />
+                                    <TextField id="outlined-basic" label="Referral Code" color="secondary" variant="outlined" />
                                     <br /><br />
                                     <Button variant="contained" size="medium" color="secondary" style={{ color: 'white', marginBottom: '20px' }}>
                                         Purchase Tropium

@@ -65,6 +65,7 @@ export const About = () => {
                                 And doctors can purchase an account with an eos account attached with the software for 250$ and 24 hour support.
                                 <br />
                                 <br />
+
                                 <VerticalTimeline>
                                     <VerticalTimelineElement
                                         className="vertical-timeline-element--work"
@@ -170,7 +171,7 @@ export const About = () => {
                                 1. Stake your Tropium <br />
                                 2. Enter your information into our encrypted database <br />
                                 3. Keep the weight at the recommended amount <br />
-                                4. If you take too much you lose your ROI and require your doctor to stake TRPN for you.
+                                4. If you take too much you lose your ROI and require your doctor to stake TRPM for you.
                             </Typography>
                             <br />
                             <hr />
