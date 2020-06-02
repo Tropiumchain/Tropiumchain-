@@ -1,5 +1,6 @@
 {
   "name": "tropium-web",
+  "home": "http://tropiumchain.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

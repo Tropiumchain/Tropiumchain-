@@ -182,6 +182,8 @@ export const DoctorPortal = () => {
                                     <br />
                                     <TextField id="outlined-basic" label="Email Address" color="secondary" variant="outlined" />
                                     <br />
+                                    <TextField id="outlined-basic" label="EOS Account Name" color="secondary" variant="outlined" />
+                                    <br />
                                     <Button variant="contained" size="medium" color="secondary" style={{ color: 'white', marginBottom: '20px' }}>
                                         Add Doctor
                                     </Button>
