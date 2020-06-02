@@ -61,15 +61,15 @@ export const Homepage = ({ history }) => {
                             </Typography>
                             <br />
                             <Typography variant="body2" color="textSecondary" component="p">
-                                The software for Tropium Chain is Closed Source and Private. However it is connected to the Tropium Blockchain Which is a Private blockchain built using the Iost Public Blockchain to record users token ammounts on both a public and private system
+                                The software for Tropium Chain is Closed Source and Private. However it is connected to the Tropium Blockchain Which is a Private blockchain built using the EOS Public Blockchain to record users token ammounts on both a public and private system
                             </Typography>
                             <br />
                             <Typography variant="body2" color="textSecondary" component="p">
-                                The only personal information on the public chain gets turned into a number in the system that corresponds to the users current updated iost wallet address. And all personal information is kept encrypted in our Private software storage and software Never for public use, it includes things like user name and token ammountsand the times they took or diddnt take their medications as well as corresponding iost addresses and if they have abused the medication the bottle will detect this.
+                                The only personal information on the public chain gets turned into a number in the system that corresponds to the users current updated EOS wallet address. And all personal information is kept encrypted in our Private software storage and software Never for public use, it includes things like user name and token ammountsand the times they took or diddnt take their medications as well as corresponding eos addresses and if they have abused the medication the bottle will detect this.
                             </Typography>
                             <br />
                             <Typography variant="body2" color="textSecondary" component="p">
-                                Users Can start staking Tropium with 5,000.000000 tropium being the ammount needed to receive staking rewards at 3% Roi Annually. This 5,000.00000 Tropium Chain Tokens also allows you to use your Tropium Smart Rx bottle as a node for our chain. Just by taking your medication on time you will receive an extra 5% staking bonus Roi annually. And you can use your Tropium for discounts at your local pharmacy on medication or other items. Or just sell your Tropium for Iost on Otb Trading platform for Iost blockchain. Or you can save up Tropium and take out a loan with a defi project.
+                                Users Can start staking Tropium with 5,000.000000 tropium being the ammount needed to receive staking rewards at 3% Roi Annually. This 5,000.00000 Tropium Chain Tokens also allows you to use your Tropium Smart Rx bottle as a node for our chain. Just by taking your medication on time you will receive an extra 5% staking bonus Roi annually. And you can use your Tropium for discounts at your local pharmacy on medication or other items. Or just sell your Tropium for EOS on Otb Trading platform for Eos blockchain. Or you can save up Tropium and take out a loan with a defi project.
                             </Typography>
                             <br />
 
